@@ -1,27 +1,21 @@
-// Test import of a JavaScript function
-import example from './modules/example';
-
-// Test import of an asset
-import webpackLogo from './assets/images/webpack-logo.svg';
-
-import Tutorial from './modules/pages/tutorial';
 import Router from './modules/router';
+import styles from './assets/styles/index.scss';
+import topnavStyles from './assets/styles/topnav.scss';
 
-// Test import of styles
-import './assets/styles/index.scss';
+const body = document.querySelector('body');
+body.classList.add(styles['u-size-large']);
+body.innerHTML = `
+  <div class="${topnavStyles.topnav}">
+    <a href="#" id="nav-tutorial">Tutorial</a>
+    <a href="#" id="nav-game">Game</a>
+    <a href="#" id="nav-about">About</a>
+  </div>
+  <div class="${styles.container}">
+    <div class="${styles.page}" id="content-tutorial">tutorial</div>
+    <div class="${styles.page}" id="content-game">game</div>
+    <div class="${styles.page}" id="content-about">about</div>
+  </div>
+`;
 
 const router = new Router(document);
 router.init();
-
-const tutorial = new Tutorial();
-console.log('tutorial content: ', tutorial.content);
-
-// Appending to the DOM
-const logo = document.createElement('img');
-logo.src = webpackLogo;
-
-const heading = document.createElement('h1');
-heading.textContent = example();
-
-const app = document.querySelector('#root');
-app.append(logo, heading);

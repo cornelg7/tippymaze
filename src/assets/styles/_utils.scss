@@ -1,0 +1,23 @@
+@import '_variables';
+
+.u-size-large {
+  font-size: calc(1.3vw + 17px);
+}
+
+.u-size-medium {
+  font-size: calc(1.3vw + 10px);
+}
+
+.u-size-small {
+  font-size: calc(1.3vw + 5px);
+}
+
+.u-size-steps {
+  font-size: 20px;
+}
+
+.u-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
