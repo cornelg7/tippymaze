@@ -1,0 +1,19 @@
+@import '_utils';
+
+/* theme dark-border */
+.tippy-box[data-theme~='dark-border'] {
+  background-color: $color-gray;
+  color: $color-whitish;
+  border: 1px solid $color-green;
+  cursor: default;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map .tippy-box[data-theme~='dark-border'] {
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+}

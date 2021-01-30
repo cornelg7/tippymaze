@@ -43,6 +43,7 @@
     "webpack-merge": "^5.2.0"
   },
   "dependencies": {
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "tippy.js": "^6.2.7"
   }
 }
