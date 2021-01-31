@@ -1,0 +1,30 @@
+@import './src/_variables';
+
+.topnav {
+  display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+  background-color: $color-gray;
+
+  a {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    float: left;
+    color: $color-whitish;
+    text-align: center;
+    padding: 7px;
+    text-decoration: none;
+    font-size: calc(1.3vw + 17px);
+
+    &:hover {
+      background-color: $color-white-warm;
+      color: $color-black;
+    }
+
+    &.active {
+      background-color: $color-green;
+      color: $color-white;
+    }
+  }
+}

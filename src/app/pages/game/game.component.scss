@@ -1,0 +1,13 @@
+@import './src/_variables';
+@import './src/_tippy';
+
+.game-container {
+  margin-left: 16px;
+  margin-right: 16px;
+
+  .row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

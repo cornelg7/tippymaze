@@ -1,13 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body class="u-size-large">
-    <!-- <script type="module" src="main.js"></script> -->
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>TippyMaze</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/border.css"/>
+</head>
+<body class="u-size-large">
+  <app-root></app-root>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+</body>
 </html>
