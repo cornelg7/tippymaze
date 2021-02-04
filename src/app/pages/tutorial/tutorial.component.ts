@@ -20,6 +20,11 @@ export class TutorialComponent implements OnInit {
   constructor(private m: TippyMakerService) { }
 
   ngOnInit(): void {
+    // @ts-ignore
+    window.yellowKey = false;
+    // @ts-ignore
+    window.redKey = false;
+    this.m.reset();
     this.addTippyOnHow();
     this.m.addRootElement(document.getElementById('tutorial-root'));
     this.m.edges = this.getEdgesForTutorialMaze();
@@ -104,7 +109,6 @@ export class TutorialComponent implements OnInit {
         // @ts-ignore
         window.redKey = true;
         this.redKey = true;
-        console.log('picked red key');
       }
     };
   }
@@ -116,7 +120,6 @@ export class TutorialComponent implements OnInit {
         // @ts-ignore
         window.yellowKey = true;
         this.yellowKey = true;
-        console.log('picked yellow key');
       }
     };
   }
@@ -125,7 +128,6 @@ export class TutorialComponent implements OnInit {
     return () => {
       // @ts-ignore
       if (window.yellowKey && !this.yellowUnlocked) {
-        console.log('unlocked yellow lock');
         this.yellowUnlocked = true;
         this.m.updateMaze(this.getEdgesForTutorialMazeBehindYellowLock());
       }
@@ -136,7 +138,6 @@ export class TutorialComponent implements OnInit {
     return () => {
       // @ts-ignore
       if (window.redKey && !this.redUnlocked) {
-        console.log('unlocked red lock');
         this.redUnlocked = true;
         this.m.updateMaze(this.getEdgesForTutorialMazeBehindRedLock());
       }
@@ -163,7 +164,7 @@ export class TutorialComponent implements OnInit {
 
   private onYellowLockClickInt(): void {
     // @ts-ignore
-    if (window.yellowKey) {
+    if (window.yellowKey && !this.yellowUnlocked) {
       // @ts-ignore
       this.textContent = '✅';
       setTimeout(() => {
@@ -182,7 +183,7 @@ export class TutorialComponent implements OnInit {
 
   private onRedLockClickInt(): void {
     // @ts-ignore
-    if (window.redKey) {
+    if (window.redKey && !this.redUnlocked) {
       // @ts-ignore
       this.textContent = '✅';
       setTimeout(() => {
