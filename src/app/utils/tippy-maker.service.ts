@@ -19,7 +19,7 @@ export class TippyMakerService {
     this.reset();
   }
 
-  node(id: string, placement: any = 'top', text: string = id, onClick = () => {}, onClickInt = () => {}): Node {
+  node(id: string, placement: any = 'top', text: string = '⬜', onClick = () => {}, onClickInt = () => {}): Node {
     if (this.nodes[id] === undefined) {
       this.nodes[id] = new Node(id, placement, text, onClick, onClickInt);
     }
@@ -52,6 +52,9 @@ export class TippyMakerService {
     }
     for (const [key, value] of Object.entries(newEdges)) {
       this.edges[key] = value;
+      if (this.elements[key]) {
+        continue;
+      }
       this.active[key] = false;
     }
     this.makeMaze();
