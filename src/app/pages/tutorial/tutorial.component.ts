@@ -213,7 +213,8 @@ export class TutorialComponent implements OnInit {
         <li>mouse only - it's too easy with a phone</li>
         <li>hover through the maze</li>
         <li>make sure the entire map (4 green borders) is visible - zoom out otherwise</li>
-        <li>click to interact</li>
+        <li>click on 🔑, 🔒, 🏆 to interact</li>
+        <li>find the trophy</li>
       </ul>
       `,
       allowHTML: true,
