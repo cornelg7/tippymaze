@@ -23,6 +23,7 @@ jobs:
       run: |
         npm install
         npm run-script deploy
+        npm run copyindexto404
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
@@ -32,8 +33,3 @@ jobs:
     - uses: actions/checkout@v2
       with:
         ref: gh-pages
-    - name: Copy to 404
-      uses: canastro/copy-file-action@master
-      with:
-        source: "index.html"
-        target: "404.html"
