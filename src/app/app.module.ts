@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TutorialComponent } from './pages/tutorial/tutorial.component';
 import { GameComponent } from './pages/game/game.component';
 import { AboutComponent } from './pages/about/about.component';
+import { RandomComponent } from './pages/random/random.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AboutComponent } from './pages/about/about.component';
     NavBarComponent,
     TutorialComponent,
     GameComponent,
-    AboutComponent
+    AboutComponent,
+    RandomComponent
   ],
   imports: [
     BrowserModule,
