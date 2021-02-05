@@ -104,7 +104,7 @@ export class GameComponent implements OnInit {
         return;
       }
       this.alreadyWonGame = true;
-      alert(`🎉 End. 🎉`);
+      alert(`🎉 End. 🎉 You can now go play random mazes if you wish.`);
     };
   }
 

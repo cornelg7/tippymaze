@@ -1,1 +1,16 @@
-<p>WIP</p>
+<div class="random-container">
+  <div class="random-header-row">
+    <h3 class="u-size-medium" id="random-header">Randomly generated mazes.</h3>
+    <div id="random-difficulty-container">
+      <span id="random-difficulty" class="u-size-steps">Difficulty {{ easy ? '🐣' : '💪'}}</span>
+    </div>
+  </div>
+  <div class="row u-size-medium error-message" *ngIf="displayError">
+    💩 Something went wrong generating the maze 😥 Refresh the page or try again later.
+  </div>
+  <div class="row" id="map-container">
+    <div id="map">
+      <div id="random-root" class="u-size-steps u-center"> start </div>
+    </div>
+  </div>
+</div>

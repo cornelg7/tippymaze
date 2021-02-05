@@ -1,0 +1,90 @@
+@import './src/_variables';
+@import './src/_tippy';
+
+.random-container {
+  margin-left: 16px;
+  margin-right: 16px;
+
+  .error-message {
+    color: $color-red;
+    margin-bottom: 32px;
+  }
+
+  .random-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0;
+
+    #random-header {
+      cursor: default;
+    }
+  }
+
+  #random-difficulty-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: 16px;
+  }
+
+  #random-difficulty {
+    height: 50px;
+    width: 140px;
+    margin-right: 10px;
+    background-color: $color-gray;
+    color: $color-whitish;
+    border: 1px solid $color-green;
+    cursor: default;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #map {
+    border: 3px solid $color-green;
+    border-radius: 4px;
+    position: relative;
+    min-width: 550px;
+    min-height: 425px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+
+  .step {
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    background-color: $color-gray;
+    color: $color-whitish;
+    border: 1px solid $color-green;
+    cursor: default;
+    border-radius: 3px;
+  }
+
+  #random-root {
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    background-color: $color-gray;
+    color: $color-whitish;
+    border: 1px solid $color-green;
+    cursor: default;
+    border-radius: 3px;
+  }
+}
