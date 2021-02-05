@@ -29,3 +29,11 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: dist/tippy-maze
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+    - name: Copy to 404
+      uses: canastro/copy-file-action@master
+      with:
+        source: "index.html"
+        target: "404.html"
